@@ -233,11 +233,11 @@ iframe  {
     background-color: rgba(0, 0, 0, 0.342);
 }
 
-.prev, .prev-first {
+.prev, .prev-first, .prev-third {
     left: 10%;
 }
 
-.next, .next-first {
+.next, .next-first, .next-third {
     right: 10%;
 }
 
@@ -255,10 +255,6 @@ iframe  {
 /* Третий проект*/
 .project__deadinside p {
     margin-top: 15px;
-}
-
-.line {
-    margin-top: 30px;
 }
 
 /* -------Blender--------- */
