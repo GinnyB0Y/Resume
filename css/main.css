@@ -16,8 +16,11 @@ body {
     margin-top: 80px;
 }
 /* --общие стили--- */
-span {
+.bold {
     font-weight: 600;
+}
+.italics {
+    font-style: italic;
 }
 
 .hide {
@@ -77,9 +80,6 @@ h5 {
     border: 1px solid rgba(0, 0, 0, 0.178);
     box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    
     background-color: rgba(247, 237, 237, 0.952);
 }
 
@@ -207,7 +207,7 @@ h5 {
     width: 50%;
 }
 
-iframe {
+iframe  {
     border-radius: 5px;
     width: 50%;
     height: 260px;
@@ -251,6 +251,14 @@ iframe {
     width: 100%;
     border-radius: 10px;
     max-height: 476px;
+}
+/* Третий проект*/
+.project__deadinside p {
+    margin-top: 15px;
+}
+
+.line {
+    margin-top: 30px;
 }
 
 /* -------Blender--------- */
