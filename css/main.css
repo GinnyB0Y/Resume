@@ -233,7 +233,7 @@ iframe  {
     background-color: rgba(0, 0, 0, 0.342);
 }
 
-.prev, .prev-first, .prev-third {
+.prev, .prev-first, .prev-second, .prev-third {
     left: 10%;
 }
 
@@ -374,6 +374,61 @@ iframe  {
     opacity: 90%;
 }
 
+/* -------Steam Link--------- */
+.steam-link {
+    margin: 20px auto 0;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.438);
+    background-color: #1b2838;
+    overflow: hidden;
+    text-decoration: none;
+    color: #c7d5e0;
+}
+
+.steam-link__img {
+    width: 300px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.steam-link__info {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.steam-link__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.steam-link__desc {
+    font-size: 14px;
+    color: #8f98a0;
+}
+
+.steam-link__url-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.steam-link__url-wrapper svg {
+    fill: #66c0f4;
+}
+
+.steam-link__url {
+    font-size: 12px;
+    color: #66c0f4;
+}
+
 /* -------------------------------------------------------------------------------------------------------- */
 @media(max-width: 1000px) {
     .work__wrapper {
@@ -498,22 +553,7 @@ iframe  {
         width: 90%;
     }
     .contact-die__img {
-        display: none;
-    }
-    .contact-die__wrapper {
-        text-align: center;
-        margin: 0 auto;
-        gap: 5px;
-        padding: 10px;
-    }
-    .contact-die__links {
-        margin: 0 auto;
-    }
-    .contact-die {
-        width: 100%;
-    }
-    .about p {
-        max-width: 100%;
+        width: 170px;
     }
 }
 
@@ -551,11 +591,16 @@ iframe  {
     }
 }
 
-@media(max-width: 430px) {
-    .menu__link {
-        width: 90px;
-    }
-    .header__menu ul {
-        align-items: center;
-    }
+/* -----video-link------- */
+.video-link {
+    width: 50%;
+    height: 260px;
+    display: block;
+    overflow: hidden;
+}
+
+.video-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

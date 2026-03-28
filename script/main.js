@@ -5,15 +5,15 @@ const sliderArrowsItems = document.querySelectorAll(".slider-items-first a"),
       nextFirst = document.querySelector(".next-first"),
       prevFirst = document.querySelector(".prev-first"),
       sliderThirdItems = document.querySelectorAll(".slider-items-third a"),
-      nextThird = document.querySelector(".next-third"),
-      prevThird = document.querySelector(".prev-third");
+      nextThird = document.querySelector(".next-second"),
+      prevThird = document.querySelector(".prev-second");
 
 let arrowsIndex = 0;
 let arrowsFirst = 0;
 let arrowsThird = 0;
 
 function changeSlideArrows(n) {
-    arrowsIndex += 1;
+    arrowsIndex += n;
     if(arrowsIndex >= sliderArrowsItems.length) arrowsIndex = 0;
     if(arrowsIndex < 0) arrowsIndex = sliderArrowsItems.length - 1;
     sliderArrowsItems.forEach(item => item.classList.add("hide"));
@@ -21,7 +21,7 @@ function changeSlideArrows(n) {
 }
 
 function changeSlideFirst(n) {
-    arrowsFirst += 1;
+    arrowsFirst += n;
     if(arrowsFirst >= sliderFirstItems.length) arrowsFirst = 0;
     if(arrowsFirst < 0) arrowsFirst = sliderFirstItems.length - 1;
     sliderFirstItems.forEach(item => item.classList.add("hide"));
@@ -29,7 +29,7 @@ function changeSlideFirst(n) {
 }
 
 function changeSlideThird(n) {
-    arrowsThird += 1;
+    arrowsThird += n;
     if(arrowsThird >= sliderThirdItems.length) arrowsThird = 0;
     if(arrowsThird < 0) arrowsThird = sliderThirdItems.length - 1;
     sliderThirdItems.forEach(item => item.classList.add("hide"));
@@ -60,8 +60,6 @@ prevThird.addEventListener("click", function() {
     changeSlideThird(-1);
 });
 
-// hideSlide(sliderBtns, sliderItems);
-
 const navBtn = document.querySelectorAll(".menu a");
 
 navBtn.forEach(btn => btn.addEventListener("click", function(event) {
@@ -73,5 +71,3 @@ navBtn.forEach(btn => btn.addEventListener("click", function(event) {
         behavior : "smooth"
     });
 }));
-
-//новый слайдер
