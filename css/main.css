@@ -233,11 +233,11 @@ iframe  {
     background-color: rgba(0, 0, 0, 0.342);
 }
 
-.prev, .prev-first, .prev-second, .prev-third {
+.prev, .prev-first, .prev-second, .prev-third, .prev-fourth {
     left: 10%;
 }
 
-.next, .next-first, .next-second, .next-third {
+.next, .next-first, .next-second, .next-third, .next-fourth {
     right: 10%;
 }
 
@@ -269,17 +269,19 @@ iframe  {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .blender__img {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
 
 .blender__img-wrapper a {
-    width: 45%;
-    height: 250px;
+    width: 33.33%;
 }
 
 /* ----------contacts-------- */

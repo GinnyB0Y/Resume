@@ -6,11 +6,15 @@ const sliderArrowsItems = document.querySelectorAll(".slider-items-first a"),
       prevFirst = document.querySelector(".prev-first"),
       sliderThirdItems = document.querySelectorAll(".slider-items-third a"),
       nextThird = document.querySelector(".next-second"),
-      prevThird = document.querySelector(".prev-second");
+      prevThird = document.querySelector(".prev-second"),
+      sliderFourthItems = document.querySelectorAll(".slider-items-fourth a"),
+      nextFourth = document.querySelector(".next-fourth"),
+      prevFourth = document.querySelector(".prev-fourth");
 
 let arrowsIndex = 0;
 let arrowsFirst = 0;
 let arrowsThird = 0;
+let arrowsFourth = 0;
 
 function changeSlideArrows(n) {
     arrowsIndex += n;
@@ -36,6 +40,14 @@ function changeSlideThird(n) {
     sliderThirdItems[arrowsThird].classList.remove("hide");
 }
 
+function changeSlideFourth(n) {
+    arrowsFourth += n;
+    if(arrowsFourth >= sliderFourthItems.length) arrowsFourth = 0;
+    if(arrowsFourth < 0) arrowsFourth = sliderFourthItems.length - 1;
+    sliderFourthItems.forEach(item => item.classList.add("hide"));
+    sliderFourthItems[arrowsFourth].classList.remove("hide");
+}
+
 nextArrow.addEventListener("click", function() {
     changeSlideArrows(1);
 });
@@ -58,6 +70,14 @@ nextThird.addEventListener("click", function() {
 
 prevThird.addEventListener("click", function() {
     changeSlideThird(-1);
+});
+
+nextFourth.addEventListener("click", function() {
+    changeSlideFourth(1);
+});
+
+prevFourth.addEventListener("click", function() {
+    changeSlideFourth(-1);
 });
 
 const navBtn = document.querySelectorAll(".menu a");
